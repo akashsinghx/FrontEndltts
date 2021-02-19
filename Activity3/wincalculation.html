@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        JavaScript
+    </title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        .centre {
+            border-radius: 5px;
+            background-color: #FCFAE7;
+            padding: 20px;
+            height: 650px;
+            width: 400px;
+
+margin-left: 27rem;
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=date],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+
+        input[type=time],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            resize: vertical;
+        }
+    </style>
+
+    <script>
+        function myFunction() {
+            var y = (document.getElementById("txt1").value);
+            var z = (document.getElementById("txt2").value);
+
+            var scoreA = y.split('/');
+            var scoreB = z.split('/');
+            var a = parseInt(scoreA[0]);
+            var b = parseInt(scoreB[0]);
+            if (a > b)
+                document.getElementById("result").innerHTML = document.getElementById("one").value;
+            else { document.getElementById("result").innerHTML = document.getElementById("two").value; }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="centre">
+        <br>
+        <h1 style="text-align: center; ">Match Summary</h1>
+        <div class="middle">
+<form onsubmit="myFunction(); return false;">
+            Team A<input id="one" type="text" required><br>
+            Team B<input id="two" type="text" required><br>
+            Date<input type="date"><br>
+            &nbsp;Time &nbsp;<input type="time"><br>
+            Team A Score<input id="txt1" type="text" required><br>
+            Team B Score<input id="txt2" type="text" required><br>
+           
+            <button
+>Save</button>
+           
+           
+            <p id="result">Winning Team:</p re>
+
+
+        </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
